@@ -1,0 +1,31 @@
+body{
+    background-color: #d9534f;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.header h1{
+    margin-bottom: 10px;
+}
+.container{
+
+}
+.timer span{
+    font-size: 5em;
+}
+.buttons{
+    margin-top: 20px;
+}
+.buttons a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 5px;
+}
+.buttons a:hover{
+    background: #fff;
+    color: #d9534f;
+}
