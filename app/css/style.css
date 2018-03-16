@@ -29,3 +29,12 @@ body{
     background: #fff;
     color: #d9534f;
 }
+.icon-about a{
+    right: 15px;
+    top: 15px;
+    position: absolute;
+}
+.icon-about a img{
+    width: 25px;
+    height: 25px;
+}
