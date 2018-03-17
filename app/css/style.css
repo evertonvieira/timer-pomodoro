@@ -4,11 +4,34 @@ body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-.header h1{
-    margin-bottom: 10px;
-}
-.container{
 
+/* about
+*/
+body.about{
+    background: #eee;
+    color: #d9534f;
+}
+.container-about{
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    background: #fff
+}
+.about h1{
+    font-size: 1.2em;
+    text-align: center;
+}
+.container-about ul li{
+    font-size: 14px;
+    text-align: left;
+    padding: 1px 0px;
+    color: #333;
+}
+.container-about a{
+    color: #d9534f;
+}
+
+.header h1{
+    margin-bottom: 5px;
 }
 .timer span{
     font-size: 5em;
