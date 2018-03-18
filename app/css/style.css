@@ -37,7 +37,7 @@ body.about{
     font-size: 5em;
 }
 .timer p{
-    margin-top: 0px;
+    margin: 0px;
 }
 .buttons{
     margin-top: 10px;
@@ -45,7 +45,7 @@ body.about{
     text-align: center;
     width: 100%;
 }
-.buttons a{
+.buttons button{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -53,10 +53,15 @@ body.about{
     border: 1px solid #fff;
     border-radius: 5px;
     margin: 5px;
+    background:none;
 }
-.buttons a:hover{
+.buttons button:hover:not([disabled]){
     background: #fff;
     color: #d9534f;
+    cursor: pointer;
+}
+.buttons button:disabled{
+    opacity: 0.5;
 }
 .icon-about a{
     right: 15px;
