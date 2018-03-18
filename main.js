@@ -4,7 +4,8 @@ app.on("ready", () => {
 
     let homeWindow = new BrowserWindow({
         width: 450,
-        height: 250
+        height: 280,
+        resizable: false,
     });
 
     homeWindow.loadURL(`file://${__dirname}/app/views/index.html`);
@@ -21,7 +22,7 @@ ipcMain.on("open-window-about", () => {
 
         aboutWindow  = new BrowserWindow({
             width: 350,
-            height: 170,
+            height: 200,
             resizable: false,
             movable: false,
             alwaysOnTop: true,
