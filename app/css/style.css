@@ -33,11 +33,17 @@ body.about{
 .header h1{
     margin-bottom: 5px;
 }
-.timer span{
+.timer span.value-timer{
     font-size: 5em;
 }
+.timer p{
+    margin-top: 0px;
+}
 .buttons{
-    margin-top: 20px;
+    margin-top: 10px;
+    float: left;
+    text-align: center;
+    width: 100%;
 }
 .buttons a{
     color: #fff;

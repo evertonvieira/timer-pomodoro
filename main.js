@@ -25,7 +25,8 @@ ipcMain.on("open-window-about", () => {
             height: 170,
             resizable: false,
             movable: false,
-            alwaysOnTop: true
+            alwaysOnTop: true,
+            minimizable: false
         });
 
         aboutWindow.loadURL(`file://${__dirname}/app/views/about.html`);
