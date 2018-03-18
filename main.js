@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell } = require("electron");
+const { app, BrowserWindow, ipcMain, shell, Notification } = require("electron");
 
 app.on("ready", () => {
 
@@ -8,7 +8,6 @@ app.on("ready", () => {
     });
 
     homeWindow.loadURL(`file://${__dirname}/app/views/index.html`);
-
 });
 
 app.on("window-all-closed", () => {

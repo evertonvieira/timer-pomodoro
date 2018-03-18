@@ -5,7 +5,7 @@ const timer = require("./timer");
 let linkSobre = document.querySelector(".sobre");
 let play = document.querySelector("#play");
 let stop = document.querySelector("#stop");
-let valueTimer =document.querySelector(".value-timer");
+let valueTimer = document.querySelector(".value-timer");
 
 linkSobre.addEventListener("click", function(){
     ipcRenderer.send("open-window-about");
