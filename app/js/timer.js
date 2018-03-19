@@ -4,7 +4,7 @@ let elementCountPomodoros = document.querySelector(".count-pomodoros");
 let count = 0;
 module.exports = {
     play: function ( elem ) {
-        //trasforma o tempo (00:25:00) em milisegundos
+        //transforma o tempo (00:25:00) em milisegundos
         let time = "00:"+elem.textContent;
         time = moment.duration(time);
         let seconds = time.asSeconds();
@@ -44,7 +44,7 @@ module.exports = {
             body: body,
             silent: true,
             hasReply: false,
-            icon: '../img/pomodoro-icon.png'
+            icon: '../img/icon.png'
         });
     },
 
