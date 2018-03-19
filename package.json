@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/evertonvieira/timer-pomodoro#readme",
   "dependencies": {
+    "audio-loader": "^1.0.3",
+    "audio-play": "^2.2.0",
     "electron": "^1.8.3",
     "moment": "^2.21.0"
   }

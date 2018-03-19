@@ -1,7 +1,20 @@
 const moment = require("moment");
+const path = require('path');
+const play = require('audio-play');
+const load = require('audio-loader');
+
+let buttonPlay = document.querySelector("#play");
+let buttonStop = document.querySelector("#stop");
+let valueTimer = document.querySelector(".value-timer");
+
 let interval;
+//count de pomodoros
 let elementCountPomodoros = document.querySelector(".count-pomodoros");
 let count = 0;
+
+//flag para emitir o som
+let finalTimer = false;
+
 module.exports = {
     play: function ( elem ) {
         //transforma o tempo (00:25:00) em milisegundos
@@ -10,7 +23,7 @@ module.exports = {
         let seconds = time.asSeconds();
         
         this.notification("Timer Pomodoro", 'Pomodoro iniciado!');
-            
+    
         clearInterval(interval);
         interval = setInterval( () => {
             seconds--;
@@ -18,6 +31,7 @@ module.exports = {
             if (elem.textContent == "00:00") {
                 clearInterval(interval);
                 count++;
+                finalTimer = true;
                 this.countPomodoro( elementCountPomodoros );
             }
         }, 1000);
@@ -40,12 +54,19 @@ module.exports = {
     },
     
     notification: function ( title, body ) {
-        new Notification(title,{
+        
+        new Notification(title, {
             body: body,
-            silent: true,
-            hasReply: false,
-            icon: '../img/icon.png'
+            icon: '../img/icon.png',
         });
+        if (finalTimer) {
+            load(path.join(__dirname, '../sound/plucky.mp3')).then(play);
+            finalTimer = false;
+            buttonStop.disabled = true;
+            buttonPlay.disabled = false;
+            valueTimer.textContent = "25:00";
+        }
+
     },
 
 }
