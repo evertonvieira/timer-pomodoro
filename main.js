@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell, Notification } = require("electron");
+const { app, BrowserWindow, ipcMain, shell, Notification, Tray, Menu  } = require("electron");
 
 let tray = null;
 
@@ -11,6 +11,22 @@ app.on("ready", () => {
     });
 
     homeWindow.loadURL(`file://${__dirname}/app/views/index.html`);
+
+    tray = new Tray(
+        `${__dirname}/app/img/icon.png`
+    );
+
+    let trayMenu = Menu.buildFromTemplate([
+        {
+            label: 'Fechar', 
+            type:'normal',
+            click(){
+                app.quit();
+            }
+        }
+    ]);
+
+    tray.setContextMenu(trayMenu);
 
 });
 
