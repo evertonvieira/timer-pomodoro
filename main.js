@@ -1,5 +1,7 @@
 const { app, BrowserWindow, ipcMain, shell, Notification } = require("electron");
 
+let tray = null;
+
 app.on("ready", () => {
 
     let homeWindow = new BrowserWindow({
@@ -9,6 +11,7 @@ app.on("ready", () => {
     });
 
     homeWindow.loadURL(`file://${__dirname}/app/views/index.html`);
+
 });
 
 app.on("window-all-closed", () => {
@@ -22,11 +25,10 @@ ipcMain.on("open-window-about", () => {
 
         aboutWindow  = new BrowserWindow({
             width: 350,
-            height: 200,
+            height: 210,
             resizable: false,
-            movable: false,
-            alwaysOnTop: true,
-            minimizable: false
+            minimizable: false,
+            maximizable: false,
         });
 
         aboutWindow.loadURL(`file://${__dirname}/app/views/about.html`);
