@@ -1,7 +1,5 @@
 const moment = require("moment");
 const path = require('path');
-const play = require('audio-play');
-const load = require('audio-loader');
 
 let buttonPlay = document.querySelector("#play");
 let buttonStop = document.querySelector("#stop");
@@ -60,7 +58,8 @@ module.exports = {
             icon: '../img/icon.png',
         });
         if (finalTimer) {
-            load(path.join(__dirname, '../sound/plucky.mp3')).then(play);
+            let audio = new Audio(path.join(__dirname, '../sound/good_bad_ugly.mp3'));
+            audio.play();
             finalTimer = false;
             buttonStop.disabled = true;
             buttonPlay.disabled = false;
