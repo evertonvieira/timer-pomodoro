@@ -6,7 +6,7 @@ app.on("ready", () => {
 
     let homeWindow = new BrowserWindow({
         width: 450,
-        height: 280,
+        height: 310,
         //resizable: false,
     });
 
