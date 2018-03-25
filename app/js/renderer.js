@@ -23,3 +23,15 @@ stop.addEventListener("click", function(){
     stop.disabled = true;
     play.disabled = false;
 });
+
+ipcRenderer.on('play-timer', () => {
+    console.log('Atalho no renderer process');
+    let click = new MouseEvent('click');
+    play.dispatchEvent(click);
+});
+
+ipcRenderer.on('stop-timer', () => {
+    console.log('Atalho no renderer process');
+    let click = new MouseEvent('click');
+    stop.dispatchEvent(click);
+});
