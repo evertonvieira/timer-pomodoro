@@ -19,12 +19,35 @@ app.on("ready", () => {
 
     let trayMenu = Menu.buildFromTemplate([
         {
+            label: "Iniciar",
+            type: "normal",
+            click: () =>{
+                homeWindow.send('play-timer');           
+            }
+        },
+        {
+            label: "Parar",
+            type: "normal",
+            click: () =>{
+                homeWindow.send('stop-timer');           
+            }
+        },
+        {
+            label: "Sobre o Timer",
+            type: 'normal',
+            click: ()=>{
+                ipcMain.emit("open-window-about");
+            }
+        },
+        {type: 'separator'},
+        {
             label: 'Fechar', 
             type:'normal',
             click(){
                 app.quit();
             }
         }
+        
     ]);
 
     tray.setContextMenu(trayMenu);
