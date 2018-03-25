@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, shell, Notification, Tray, Menu  } = requir
 
 let tray = null;
 
+app.setAppUserModelId("pomodoro.timer");
 app.on("ready", () => {
 
     let homeWindow = new BrowserWindow({

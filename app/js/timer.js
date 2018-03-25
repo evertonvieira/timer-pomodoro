@@ -52,7 +52,7 @@ module.exports = {
     },
     
     notification: function ( title, body ) {
-        
+
         new Notification(title, {
             body: body,
             icon: '../img/icon.png',
