@@ -10,9 +10,7 @@ pipeline {
         }
         stage('deploy') {
           steps {
-            sh '''echo "executando deploy"
-
-input "quer mesmo deployar?"'''
+            sh 'echo "executando deploy"'
           }
         }
       }
