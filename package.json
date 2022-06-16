@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/evertonvieira/timer-pomodoro#readme",
   "dependencies": {
-    "electron": "^1.8.3",
+    "electron": "^15.5.5",
     "moment": "^2.21.0"
   }
 }
